@@ -23,5 +23,5 @@ curl -X POST http://127.0.0.1:5000/book -H "Content-Type: application/json" -d "
 
 ### Get Bookings by Email:
 ```bash
-curl http://127.0.0.1:5000/bookings?email=karthik@example.com
+curl http://127.0.0.1:5000/bookings?email=karthikbm@example.com
 ```
