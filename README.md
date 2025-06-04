@@ -17,7 +17,8 @@ curl http://127.0.0.1:5000/classes?timezone=UTC
 
 ### Book a Class:
 ```bash
-curl -X POST http://127.0.0.1:5000/book -H "Content-Type: application/json" -d '{"class_id": 1, "client_name": "Karthik", "client_email": "karthik@example.com"}'
+curl -X POST http://127.0.0.1:5000/book -H "Content-Type: application/json" -d "{\"class_id\": 2, \"client_name\": \"Karthik B M\", \"client_email\": \"karthikbm@example.com\"}"
+
 ```
 
 ### Get Bookings by Email:
