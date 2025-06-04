@@ -56,6 +56,15 @@ def get_bookings():
     } for b in bookings]
     return jsonify(result)
 
+@app.route("/bookings/<email>", methods=["GET"])
+def get_bookings_by_email(email):
+    bookings = Booking.query.filter_by(client_email=email).all()
+    result = [{
+        "class_id": b.class_id,
+        "client_name": b.client_name
+    } for b in bookings]
+    return jsonify(result)
+
 @app.route("/", methods=["GET"])
 def root():
     return jsonify({"message": "Welcome to the Fitness Booking API. Available endpoints: /classes, /book, /bookings"})
